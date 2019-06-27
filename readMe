@@ -1,0 +1,33 @@
+
+ PyCharm 툴로 작업
+
+플라스크(Flask)로 워드 클라우드 API 구현하기
+플라스크(Flask) 웹 서버를 이용하여, 클라이언트(client)에 해당하는 리액트 프론트 엔드에서 워드 클라우드 이미지를 요청하기 위해서 클라이언트의 요청(Request)을 받아서
+워드 클라우드를 그려주는 웹 서버를 작업
+
+1. 파이썬 라이브러리 추가 (File -> Settings 클릭 Project:My Python Word Cloud 프로젝트 탭 -> Project interPreter에서 라이브러리 추가가 가능 )
+ ->해당 프로젝트가 없는 경우 설정 버튼 클릭 후 add로 추가해줌
+Project interPreter에 프로젝트 선택이 되었으면
+옆에 +버튼 클릭해서 라이브러리 추가
+(python] error: Microsoft Visual C++ 14.0 is required 에러가 난다면 https://nologout.blog.me/221440309296첨부파일 다운로드해서 설치)
+
+   WordCloud(워드 클라우드를 그리는 라이브러리)  => wordcloud
+   konlpy Twitter(한국어 자연어 처리 라이브러리)  => konlpy
+   Counter(명사의 출현 빈도를 세는 라이브러리)   => 기본 제공
+   Matplotlib(워드 클라우드 이미지를 실제로 그림 파일에 표현하는 목적의 라이브러리) 그래프형태로 표현 => matplotlib
+   flask, flask_cors(웹개발의 API를 제공하기 위해서)
+
+   Anaconda Powershell Prompt관리자 권한으로 실행
+   conda install -c conda-forge wordcloud
+
+
+2.나눔고딕 폰트 다운로드 https://github.com/ndb796/WordCloud-Python 에서 NanumGothic.ttf
+
+3. Restlet 구글 확장프로그램 https://chrome.google.com/webstore/detail/restlet-client-rest-api-t/aejoelaoggembcahagimdiliamlcdmfm 다운로드가능
+
+4.Java JVM 설치도 필요함
+ -java는 설치 되어있어도 $JAVA_HOME의 자바환경변수를 cmd에서 확인(echo $JAVA_HOME,설치된 장소 확인: echo %JAVA_HOME%)
+ ->설정되어있는데도 오류가 나면 기본 파이썬은 32bit지만 자바는 64bit일 가능성이 높다 그래서 아나콘다 파이썬 64bit 설치
+ https://www.anaconda.com/distribution/ 에서 설치 가능
+
+4-1 Anaconda 가상환경 설정및 파이참 설정(https://bradbury.tistory.com/62, https://bradbury.tistory.com/63)
