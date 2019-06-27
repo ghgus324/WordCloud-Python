@@ -51,12 +51,12 @@ def make_cloud_image(tags, file_name):
 
 
 def process_from_text(text, max_count, min_length, words, file_name):
-     tags = get_tags(text, int(max_count), int(min_length))
+    tags = get_tags(text, int(max_count), int(min_length))
     # 단어 가중치를 적용합니다.
     for n, c in words.items():
         if n in tags:
             tags[n] = tags[n] * float(words[n])
-    make_cloud_image(1, file_name)
+    make_cloud_image(tags, file_name)
 
 
 @app.route("/process", methods=['GET', 'POST'])
